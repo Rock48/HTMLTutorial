@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    .code {
+        border: 1px solid black;
+        padding-left: 2em;
+    }
+    p {
+        width: 768px;
+        font-family: Comic Sans MS;
+    }
+    h1 {
+        font-family: Comic Sans MS;
+    }
+    h2 {
+        font-family: Comic Sans MS;
+    }
+    div {
+        width: 768px;
+    }
+    a:visited {
+        color:#404040
+    }
+    a {
+        color:#404040
+    }
+    a:hover {
+        color:#a0a0a0
+    }
+</style>
+<body>
+    <a name="top"></a>
+    <h1>HTML Tutorials</h1>
+    <p>A list of html tag tutorials, by Charlie Quigley</p>
+    <ul>
+        <li><a href="#paragraph">Paragraph Tag</a></li>
+        <li><a href="#anchor">Anchor Tag</a></li>
+        <li><a href="#image">Image Tag</a></li>
+        <li><a href="#code">Code Tag</a></li>
+    </ul>
+    <hr>
+    <a name="paragraph"></a>
+    <h2>The Paragraph Tag</h2>
+    <p>
+        The paragraph tag, or the <code>&lt;p&gt;</code> tag, defines a paragraph in your web page. This has a variety of uses including organization and styling options. When you close a paragraph it does a large line break in the page, to separate other paragraphs. Example:
+    </p>
+    <div class="code">
+        <p>
+            <code>
+               &lt;p&gt;<br>
+               &nbsp;&nbsp;&nbsp;This is a paragraph YAY<br>
+               &lt;/p&gt;<br>
+               &lt;p&gt;<br>
+               &nbsp;&nbsp;&nbsp;This is another paragraph -- YAY!<br>
+               &lt;/p&gt;<br>
+            </code>
+        </p>
+    </div>
+    <p>
+        Would result with:
+    </p>
+    <div class="code">
+        <p>
+            This is a paragraph YAY
+        </p>
+        <p>
+            This is another paragraph -- YAY!
+        </p>
+    </div>
+    <p><a href="#top">Top</a></p>
+
+    <hr>
+    <a name="anchor"></a>
+    <h2>The Anchor Tag</h2>
+    <p>A major tag that is used in almost every web page is the anchor or <code>&lt;a&gt;</code> tag. This tag can be used in multiple ways; the most common way being hyperlinks. Hyperlinks are the blue clicky things on websites that bring you to other pages. Anchor tags can also be used to create an "Anchor" on a page, allowing yout to click a link, or press a button, and skip to a specific point or "anchor" on the page. Here's an example of a hyperlink:</p>
+    <div class="code">
+        <p>
+            <code>
+                &lt;a href="https://google.com/"&gt;My Link!&lt;/a&gt;
+            </code>
+        </p>
+    </div>
+    <p>Brings about</p>
+    <div class="code">
+        <p>
+            <a href="https://google.com/">My Link</a>
+        </p>
+    </div>
+    <p>Page anchors are a little bit more complicated. These allow you to skip down to a position on the page by clicking another link. I use it on this page multiple times -- here's an example.</p>
+    <div class="code">
+        <p>
+            <code>
+                &lt;a href="#example_anchor"&gt;My Anchor Link!&lt;/a&gt;<br>
+                ...stuff<br>
+                &lt;a name="example_anchor"&gt;&lt;/a&gt;<br>
+                It will skip to here!
+            </code>
+        </p>
+    </div>
+    <p>Makes</p>
+    <div class="code">
+        <p>
+            <a href="#example_anchor">My Anchor Link!</a><br>
+            ...stuff<br>
+            ...stuff<br>
+            ...stuff<br>
+            ...stuff<br>
+            <a name="example_anchor"></a><br>
+            It will skip to here!
+        </p>
+    </div>
+    <p><a href="#top">Top</a></p>
+
+    <hr>
+    <a name="image"></a>
+    <h2>Images</h2>
+    <p>
+        The image or <code>&lt;img&gt;</code> tag allows you to put images on the page. This image tag comes with a variety of options, allowing you to set the source, width, and height of the image. I prefer to do alignment settings with CSS in the <code>&lt;style&gt;</code> tag. Here's an example of how to use an image:
+    </p>
+    <div class="code">
+        <p>
+            <code>
+                &lt;img src="/images/banana.jpg" width="600"&gt;
+            </code>
+        </p>
+    </div>
+    <p>Would give you:</p>
+    <div class="code">
+        <p>
+            <img src="/images/banana.jpg" width="600">
+        </p>
+    </div>
+    <p>
+        As you can see, setting the width to 600 automatically changes the height to match the aspect ratio. The same thing happens if you set the height and not the width. If you want to distort the image, set the width as well as the height.
+    </p>
+    <div class="code">
+        <p>
+            <code>
+                &lt;img src="/images/banana.jpg" width="600" height="100"&gt;
+            </code>
+        </p>
+    </div>
+    <p>Which results in:</p>
+    <div class="code">
+        <p>
+            <img src="/images/banana.jpg" width="600" height="100">
+        </p>
+    </div>
+    <p><a href="#top">Top</a></p>
+
+    <hr>
+    <a name="code"></a>
+    <h2>The Code Tag</h2>
+    <p>I've used the code tag in this web page many times already, now to show you what it does. The <code>&lt;code&gt;</code> tag is used to format a block of text to look like code. Example:</p>
+    <div class="code">
+        <p>
+            <code>
+                &lt;code&gt;<br>
+                &nbsp;&nbsp;&nbsp;This is some code -- YAY!<br>
+                &lt;/code&gt;<br>
+            </code>
+        </p>
+    </div>
+    <p>Makes it look like:</p>
+    <div class="code">
+        <p>
+            <code>
+                This is some code -- YAY!
+            </code>
+        </p>
+    </div>
+    <p>A pretty simple tag, but still pretty useful.</p>
+    <p><a href="#top">Top</a></p>
+
+</body>
+</html>
