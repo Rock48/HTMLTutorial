@@ -41,6 +41,8 @@
         <li><a href="#anchor">Anchor Tag</a></li>
         <li><a href="#image">Image Tag</a></li>
         <li><a href="#code">Code Tag</a></li>
+        <li><a href="#emphasis">Emphasis</a></li>
+        <li><a href="#buttons">Button Tag</a></li>
     </ul>
     <hr>
     <a name="paragraph"></a>
@@ -80,7 +82,7 @@
     <div class="code">
         <p>
             <code>
-                &lt;a href="https://google.com/"&gt;My Link!&lt;/a&gt;
+                &lt;a href=&quot;https://google.com/&quot;&gt;My Link!&lt;/a&gt;
             </code>
         </p>
     </div>
@@ -94,9 +96,9 @@
     <div class="code">
         <p>
             <code>
-                &lt;a href="#example_anchor"&gt;My Anchor Link!&lt;/a&gt;<br>
+                &lt;a href=&quot;#example_anchor&quot;&gt;My Anchor Link!&lt;/a&gt;<br>
                 ...stuff<br>
-                &lt;a name="example_anchor"&gt;&lt;/a&gt;<br>
+                &lt;a name=&quot;example_anchor&quot;&gt;&lt;/a&gt;<br>
                 It will skip to here!
             </code>
         </p>
@@ -124,7 +126,7 @@
     <div class="code">
         <p>
             <code>
-                &lt;img src="/images/banana.jpg" width="600"&gt;
+                &lt;img src=&quot;/images/banana.jpg&quot; width=&quot;600&quot;&gt;
             </code>
         </p>
     </div>
@@ -140,7 +142,7 @@
     <div class="code">
         <p>
             <code>
-                &lt;img src="/images/banana.jpg" width="600" height="100"&gt;
+                &lt;img src=&quot;/images/banana.jpg&quot; width=&quot;600&quot; height=&quot;100&quot;&gt;
             </code>
         </p>
     </div>
@@ -173,8 +175,100 @@
             </code>
         </p>
     </div>
-    <p>A pretty simple tag, but still pretty useful.</p>
     <p><a href="#top">Top</a></p>
 
+    <hr>
+    <a name="emphasis"></a>
+    <h2>Emphasis using bold, italic and underline</h2>
+    <p>I'm sure everybody reading has used some kind of word processor before, which means you probably have made some word, <b>bold</b>, <i>italic</i>, or <u>underlined</u> before. Now, keep in mind, this method for underlining is currently deprecated for favor of using CSS, but it still works for now. Here's how to do it:</p>
+
+    <div class="code">
+        <p>
+            <code>
+                &lt;b&gt;This is Bold!&lt;/b&gt;&lt;br&gt;<br>
+                &lt;i&gt;This is Italic!&lt;/i&gt;&lt;br&gt;<br>
+                &lt;u&gt;This is Underlined!&lt;/u&gt;&lt;br&gt;<br>
+                &lt;b&gt;&lt;u&gt;&lt;i&gt;This is all three!&lt;/i&gt;&lt;/u&gt;&lt;/b&gt;<br>
+            </code>
+        </p>
+    </div>
+    <p>Gives:</p>
+    <div class="code">
+        <p>
+            <b>This is Bold!</b><br>
+            <i>This is Italic!</i><br>
+            <u>This is Underlined!</u><br>
+            <b><u><i>This is all three!</i></u></b>
+        </p>
+    </div>
+    <p><a href="#top">Top</a></p>
+
+    <hr>
+    <a name="buttons"></a>
+    <h2>Buttons</h2>
+    <p>
+        Well it should really be kinda self explainitory, but the <code>&lt;button&gt;</code> tag makes buttons. You can even click them. Here's a quick basic example:
+    </p>
+    <div class="code">
+        <p>
+            <code>
+                &lt;button&gt;I'm A Button!&lt;/button&gt;
+            </code>
+        </p>
+    </div>
+    <p>Will simply give you:</p>
+    <div class="code">
+        <p>
+            <button>I'm A Button!</button>
+        </p>
+    </div>
+    <p>
+        Well that's cool and everything, but it doesn't <i>really</i> do anything does it? Well, you can make it do stuff, for example, you can surround it in an <code>&lt;a&gt;</code> tag, with an <code>href</code> option to make it into a hyperlink-button, (I call it a hyperbutton :P)
+    </p>
+    <div class="code">
+        <p>
+            <code>
+                &lt;a href="https://google.com/"&gt;&lt;button&gt;I'm A HyperButton!&lt;/button&gt;&lt;/a&gt;
+            </code>
+        </p>
+    </div>
+    <p>And...</p>
+    <div class="code">
+        <p>
+            <a href="https://google.com/"><button>I'm A HyperButton!</button></a>
+        </p>
+    </div>
+    <p>
+        Pretty simple, right? Now, with the evolution of the web, buttons can do a little bit more, but it requires a bit of JavaScript. By specifying an <code>onclick</code> option in your button, you can execute a JavaScript method somewhere on your page. Here's something simple, an example of a dynamic web page.
+    </p>
+    <div class="code">
+        <p>
+            <code>
+                &lt;span id=&quot;example_span&quot;&gt;Hello!&lt;/span&gt;&lt;br&gt;<br>
+                &lt;button onclick=&quot;example_button_method()&quot;&gt;I do something!&lt;/button&gt;<br>
+                &lt;script&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;function example_button_method() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item = document.getElementById(&quot;example_span&quot;);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.innerHTML = &quot;Goodbye!&quot;;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &lt;/script&gt;<br>
+            </code>
+        </p>
+    </div>
+    <p>Which gives you the slightly more complicated result of:</p>
+    <div class="code">
+        <p>
+            <span id="example_span">Hello!</span><br>
+            <button onclick="example_button_method()">I do something!</button>
+            <script>
+                function example_button_method() {
+                    item = document.getElementById("example_span");
+                    item.innerHTML = "Goodbye!";
+                }
+            </script>
+        </p>
+    </div>
+    <p>Pretty neat huh?</p>
+    <p><a href="#top">Top</a></p>
 </body>
 </html>
